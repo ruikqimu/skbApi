@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>微信付款</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+
+	}
+	 .clearfix:after{
+		content:"";
+		display: block;
+		clear: both;
+	} 
+
+	html,body{
+		/*height:100%;*/
+		width: 100%;
+		background-color: #f8f8f8;
+
+	}
+	.account{
+		margin-top: 37.5px;
+		width: 92%;
+		height: 183.5px;
+		background-color: #ffffff;
+		border-radius: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 35px;
+	}
+		.pay_account{
+				height: 16px;
+				text-align: center;
+				color: #999999;
+				font-size: 17px;
+				letter-spacing: 1px;
+		}
+			ul{
+				list-style: none;
+				padding: 0;
+			}
+			 
+					li{
+						list-style: none;
+						display: inline-block;
+						margin-left: 5px;
+						margin-right: 5px;
+						/*color: #333333;*/
+					}
+						.font{list-style: none;}
+						i{
+							display: inline-block;
+							/*使用垂直居中*/
+							vertical-align: middle;
+							border-radius: 50%;
+							width: 5px;
+							height: 5px;
+							background-color: #333333;
+						}
+						    .dark{
+							/*设置透明度*/
+							opacity: 0.5;}
+							.medium{opacity: 0.3;}
+							.light{opacity: 0.1;}
+		.money{
+			color: #FE9205;
+			font-size: 33px;
+			/*font-weight: bold;*/
+			font-weight: 500;
+			margin-top: 31px;
+			text-align: center;
+			font-family: PingFang-SC-Bold;
+			letter-spacing: 1px;
+		}
+		.getAccount{
+			margin-top: 41px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 15px;
+			color: #333333;
+			text-align: center;
+			letter-spacing: 1px;
+			width: 90%;
+			height: 14.5px;
+		}
+			.company{
+				padding-left: 10%;
+			}
+
+	.button{
+		width: 88.5%;
+		height: 44px;
+		background-color: #02ce7a;
+		margin-top: 60.5px;
+		text-align: center;
+		line-height: 44px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+		font-size: 15px;
+		color: #ffffff;
+		word-spacing: 1px;
+		letter-spacing: 1px;
+	}
+	.button img{
+		width: 17.5px;
+		height: 14.5px;
+	}
+
+
+
+</style>
+</head>
+<body>
+	    <div class="account">
+	    	<div class="pay_account">
+	    		<ul class="clearfix">
+	    			<li >
+	    				<i class="light"></i>
+	    				<i class="medium"></i>
+	    				<i class="dark"></i>
+	    			</li>
+	    			<li class="font">付款金额</li>
+	    			<li ><i class="dark"></i>
+	    			     <i class="medium"></i>
+	    			     <i class="light"></i>
+	    			 </li>
+	    		</ul>
+	    	</div>
+	    	<div class="money">&#165;{$amount}</div>
+	    	<div class="getAccount">
+	    		<span>收款商户:</span>
+	    		<span class="company">{$businessName}</span>
+	    	</div>
+	    	
+	    </div>
+	    <div class="button" onclick="window.location.href='{$payUrl}'">
+	    	<img src="__IMG__/icon_wechat_01@2x.png">
+	    	确认付款
+	    </div>
+</body>
+
+</html>
